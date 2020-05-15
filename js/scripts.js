@@ -1,7 +1,13 @@
 //Business Logic
 const pigLatin = function(translation) {
-  return false;
+  if (translation === "a" || translation === "e" || translation === "i" || translation === "o" || translation === "u")  {
+    return translation + "way";
+} else { 
+    return translation + "nay";
 }
+
+};
+
 
 
 
@@ -16,9 +22,8 @@ $(document).ready(function() {
     event.preventDefault();
     var translation = $("#words").val();
     var result = pigLatin(translation);
-      if (result === false) {
-      $(".translation").text(translation);
-    }
+      $(".translation").text(result);
+    
     $("#result").show();
 
   });
