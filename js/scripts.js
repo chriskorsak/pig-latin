@@ -2,8 +2,9 @@
 const pigLatin = function(translation) {
   if (translation === "a" || translation === "e" || translation === "i" || translation === "o" || translation === "u")  {
     return translation + "way";
-} else { 
-    return translation + "nay";
+} else {
+    return translation.slice(1) + translation.charAt(0) + "ay";
+    // return translation + "ay";
 }
 
 };
